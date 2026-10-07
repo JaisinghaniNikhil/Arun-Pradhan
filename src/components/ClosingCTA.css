@@ -1,0 +1,82 @@
+/* =========================================================
+   CLOSING CTA  (big navy card near the bottom of the page)
+   Class names start with "cta-"
+   ========================================================= */
+
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;   /* space before the footer */
+}
+
+.cta-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #03286a 0%, var(--navy-dark) 100%);
+  box-shadow: var(--shadow);
+  color: var(--white);
+}
+
+.cta-card h2 {
+  color: var(--white);
+  text-wrap: balance;
+}
+
+.cta-card p {
+  max-width: 48ch;
+  margin: 1.2rem 0 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;      /* buttons drop to a new line if there's no room */
+  gap: 1rem;
+}
+
+/* ---------- Right side: acts like a logo ---------- */
+.cta-brand {
+  padding-left: 3rem;
+  text-align: center;
+  border-left: 1px solid rgba(171, 143, 70, 0.4);   /* thin gold divider */
+}
+
+/* the ".cta-card" prefix makes these win over ".cta-card p" above */
+.cta-card .cta-brand-name {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.cta-card .cta-brand-tag {
+  margin: 0.8rem 0 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+/* When the CTA comes right after the blue Mentoring band (About page),
+   add space on top so the two don't touch. */
+.mentor + .cta {
+  padding-top: 5rem;
+}
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+    padding: 2.2rem 1.6rem;
+    gap: 2rem;
+  }
+
+  .cta-brand {
+    padding: 1.5rem 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(171, 143, 70, 0.4);   /* line moves to the top */
+  }
+}

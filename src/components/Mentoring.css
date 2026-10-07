@@ -1,0 +1,56 @@
+/* =========================================================
+   MENTORING BAND  (full-width blue strip, centered text)
+   Class names start with "mentor"
+   ========================================================= */
+
+.mentor {
+  position: relative;
+  overflow: hidden;                 /* hides the parts of the rings that go outside */
+  padding: 6rem 0;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(180deg, #274068 0%, #324f79 100%);
+}
+
+/* two big faint circles behind the text (pure decoration) */
+.mentor::before,
+.mentor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translate(-50%, -50%);   /* centers each circle */
+}
+
+.mentor::before {
+  width: 760px;
+  height: 760px;
+}
+
+.mentor::after {
+  width: 520px;
+  height: 520px;
+  border-color: rgba(171, 143, 70, 0.25);   /* faint gold */
+}
+
+/* the text sits ABOVE the circles */
+.mentor-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 780px);
+  margin-inline: auto;
+}
+
+.mentor h2 {
+  color: var(--white);
+  text-wrap: balance;
+}
+
+.mentor p {
+  max-width: 56ch;
+  margin: 1.4rem auto 2.2rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}

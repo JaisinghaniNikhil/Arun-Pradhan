@@ -1,0 +1,228 @@
+/* =========================================================
+   WHY ARUN  (one card: tabs + text on the left,
+   full-height navy block on the right)
+   Class names start with "why-"
+   ========================================================= */
+
+.why {
+  background: var(--off-white);
+}
+
+.why-title {
+  max-width: 26ch;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-wrap: balance;   /* splits the lines evenly */
+}
+
+.why-label {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+/* ---------- The card = two columns that are equally tall ---------- */
+.why-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 460px;          /* gives the card a generous height */
+  overflow: hidden;           /* keeps the navy block inside the rounded corners */
+  background: #fffdf6;        /* warm white, like Wealthspire */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Left column ---------- */
+.why-left {
+  padding: 2.8rem 3.5rem 3.5rem;
+}
+
+.why-tabs {
+  display: flex;
+  gap: 2.2rem;
+  overflow-x: auto;           /* tabs scroll sideways if a phone is too narrow */
+}
+
+.why-tab {
+  padding-bottom: 0.7rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text);
+  opacity: 0.45;              /* faded when not selected */
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.why-tab:hover {
+  opacity: 1;
+}
+
+.why-tab-active {
+  color: var(--gold-text);
+  opacity: 1;
+  border-bottom-color: var(--gold);   /* gold underline on the open tab */
+}
+
+.why-text {
+  margin-top: 2.8rem;
+}
+
+.why-text h3 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--gold-text);
+}
+
+.why-text p {
+  max-width: 44ch;
+  margin: 1.4rem 0 2.2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.why-link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.why-link:hover {
+  border-bottom-color: var(--gold-text);
+}
+
+/* ---------- Right column: navy block with rings + big number ---------- */
+.why-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--navy-royal) 0%, var(--navy-dark) 100%);
+}
+
+/* two thin circles behind the number (pure decoration) */
+.why-visual::before,
+.why-visual::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);   /* centers each circle */
+}
+
+.why-visual::before {
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(106, 184, 206, 0.25);   /* sky blue ring */
+}
+
+.why-visual::after {
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(171, 143, 70, 0.4);     /* gold ring */
+}
+
+.why-number {
+  position: relative;          /* keeps the number above the rings */
+  z-index: 1;
+  font-size: clamp(4.5rem, 9vw, 6.5rem);
+  font-weight: 200;
+  line-height: 1;
+  color: var(--sky);
+}
+
+.why-visual-label {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .why-card {
+    grid-template-columns: 1fr;   /* stack: text first, navy block below */
+    min-height: 0;
+  }
+
+  .why-left {
+    padding: 1.8rem 1.5rem 2.2rem;
+  }
+
+  .why-text {
+    margin-top: 2rem;
+  }
+
+  .why-visual {
+    min-height: 220px;
+  }
+}
+
+/* =========================================================
+   PHOTO VERSION of the right column
+   ========================================================= */
+
+/* when a photo is shown, hide the two decorative rings */
+.why-visual-photo::before,
+.why-visual-photo::after {
+  display: none;
+}
+
+.why-photo-wrap {
+  position: absolute;      /* fills the whole right column */
+  inset: 0;
+}
+
+.why-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crops to fit, never stretches */
+}
+
+/* dark fade at the bottom so the label is readable */
+.why-photo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 13, 31, 0.75) 100%);
+}
+
+.why-photo-label {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 1.3rem;
+  z-index: 1;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .why-visual-photo {
+    min-height: 280px;
+  }
+}

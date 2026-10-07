@@ -1,0 +1,32 @@
+/* =========================================================
+   FLOATING WHATSAPP BUTTON  (stays in the corner while scrolling)
+   ========================================================= */
+
+.wa {
+  position: fixed;          /* fixed = stays in place even when you scroll */
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;      /* WhatsApp green */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .wa {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa { transition: none; }
+}

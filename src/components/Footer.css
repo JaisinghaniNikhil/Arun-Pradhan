@@ -1,0 +1,113 @@
+/* =========================================================
+   FOOTER
+   Class names start with "footer-"
+   ========================================================= */
+
+.footer {
+  padding: 4rem 0 2rem;
+  background: var(--off-white);
+  border-top: 1px solid rgba(171, 143, 70, 0.4);   /* thin gold line on top */
+}
+
+/* ---------- Three columns ---------- */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: 3rem;
+}
+
+.footer-name {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--navy-deep);
+}
+
+.footer-tag {
+  margin-top: 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.footer-quote {
+  max-width: 40ch;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+  border-left: 2px solid var(--gold);   /* gold bar beside the quote */
+}
+
+.footer-heading {
+  margin-bottom: 1rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.footer-list {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.footer-list a {
+  transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+  color: var(--gold-text);
+}
+
+/* ---------- Map ---------- */
+.footer-map {
+  margin-top: 3rem;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: 0;
+}
+
+/* ---------- Bottom bar ---------- */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(27, 36, 55, 0.12);
+}
+
+.footer-disclaimer {
+  max-width: 100ch;
+  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-top: 1.2rem;
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

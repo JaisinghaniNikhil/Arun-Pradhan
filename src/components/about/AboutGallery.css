@@ -1,0 +1,157 @@
+/* =========================================================
+   ABOUT: awards and certificates gallery
+   Class names start with "gal-"
+   ========================================================= */
+
+.gal-label {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.gal-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.gal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* the animation wrapper: lets every card stretch to the same height */
+.gal-cell {
+  display: flex;
+}
+
+.gal-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(17, 33, 72, 0.07);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(17, 33, 72, 0.16);
+}
+
+/* ---------- Image area: every card gets the same 4:3 shape ---------- */
+.gal-img-box {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--off-white);
+}
+
+.gal-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* photos: fill the frame, crop the edges */
+  transition: transform 0.5s ease;
+}
+
+/* certificates: show the WHOLE certificate, with a little margin around it */
+.gal-cert {
+  padding: 1rem;
+}
+
+.gal-cert img {
+  object-fit: contain;
+}
+
+/* gentle zoom on photos only (not on certificates) */
+.gal-card:hover .gal-img-box:not(.gal-cert) img {
+  transform: scale(1.04);
+}
+
+/* ---------- Text under the image ---------- */
+.gal-info {
+  padding: 1.3rem 1.5rem 1.6rem;
+}
+
+.gal-year {
+  margin-bottom: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.gal-info h3 {
+  font-size: 1.2rem;
+  color: var(--navy-deep);
+}
+
+.gal-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.gal-note {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ---------- Tablet / mobile ---------- */
+@media (max-width: 1000px) {
+  .gal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gal-grid {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 5% 14px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 5%;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .gal-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gal-cell {
+    flex: 0 0 100%;
+    min-width: 0;
+    scroll-snap-align: center;
+  }
+
+  .gal-card {
+    height: 100%;
+  }
+
+  .gal-info {
+    padding: 1.1rem 1.2rem 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gal-card,
+  .gal-img-box img { transition: none; }
+
+  .gal-grid { scroll-behavior: auto; }
+}

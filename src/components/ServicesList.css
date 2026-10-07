@@ -1,0 +1,176 @@
+/* Uses existing brand tokens, with standalone preview fallbacks. */
+.sl { padding-top: 3rem; color: var(--navy-deep, #112148); }
+.sl *, .sl *::before, .sl *::after { box-sizing: border-box; }
+.sl-toolbar { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: 1.8rem; flex-wrap: wrap; }
+.sl-provider { display: flex; flex-wrap: wrap; gap: .35rem; padding: .35rem; border-radius: 12px; background: #eeeae2; }
+.sl-provider-btn { padding: .7rem 1.1rem; border: 0; border-radius: 8px; background: transparent; font: inherit; font-size: .85rem; color: inherit; cursor: pointer; }
+.sl-provider-btn.is-active { background: var(--navy-deep, #112148); color: #fff; }
+.sl-search { display: grid; gap: .4rem; width: min(100%, 340px); font-size: .8rem; font-weight: 600; }
+.sl-search input { width: 100%; min-width: 0; padding: .8rem 1rem; border: 1px solid #b8bac3; border-radius: 8px; background: #fff; color: #112148; font: inherit; font-weight: 400; }
+.sl-chips { display: flex; flex-wrap: wrap; gap: .6rem; }
+.sl-chip { display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; font: inherit; font-size: .72rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; color: var(--navy-deep, #112148); background: transparent; border: 1px solid rgba(171,143,70,.6); border-radius: 999px; cursor: pointer; transition: background .2s, color .2s; }
+.sl-chip:hover { background: rgba(171,143,70,.12); }
+.sl-chip-active, .sl-chip-active:hover { background: var(--navy-deep, #112148); color: #fff; border-color: var(--navy-deep, #112148); }
+.sl-chip-count { font-size: .7rem; letter-spacing: 0; opacity: .8; }
+.sl button:focus-visible, .sl a:focus-visible, .sl input:focus-visible { outline: 3px solid #aa8537; outline-offset: 4px; }
+.sl-count { margin: 1.4rem 0 1.6rem; font-size: .85rem; color: #62697b; }
+.sl-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.6rem; }
+.sl-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid rgba(17,33,72,.1); background: var(--white,#fff); border-radius: var(--radius,12px); box-shadow: var(--shadow,0 8px 26px rgba(17,33,72,.06)); overflow: hidden; }
+.sl-image-wrap { height: 250px; position: relative; padding: 16px 20px 32px; display: flex; align-items: center; justify-content: center; background: #f0ede6; border-bottom: 1px solid #e8e4da; }
+.sl-image { width: 100%; height: 100%; object-fit: contain; display: block; }
+.sl-image-logo { padding: 38px; background: #fbfaf6; }
+.sl-image-caption { position: absolute; left: 12px; bottom: 9px; right: 12px; text-align: center; color: #636876; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; }
+.sl-card-body { flex: 1; display: flex; flex-direction: column; padding: 1.6rem; }
+.sl-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; margin-bottom: .9rem; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--gold-text,#806524); }
+.sl-planno { white-space: nowrap; }
+.sl-card h3 { margin: 0 0 .55rem; font-size: 1.4rem; line-height: 1.3; color: var(--navy-deep,#112148); overflow-wrap: anywhere; }
+.sl-uin { margin: 0 0 .9rem; font-size: .69rem; letter-spacing: .025em; color: #666d7c; overflow-wrap: anywhere; }
+.sl-badge { align-self: flex-start; margin: 0 0 .9rem; padding: .3rem .65rem; border: 1px solid #dfd3ae; background: #faf6e8; border-radius: 5px; font-size: .72rem; color: #6d5520; }
+.sl-tagline { margin: 0; font-size: .95rem; line-height: 1.65; }
+.sl-points { margin: 1rem 0 0; padding: 0; list-style: none; font-size: .85rem; line-height: 1.6; color: #4b5365; }
+.sl-points li { position: relative; padding-left: 1rem; margin-bottom: .45rem; }
+.sl-points li::before { content: ""; position: absolute; left: 0; top: .65em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold,#ab8f46); }
+.sl-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-top: auto; padding-top: 1.5rem; }
+.sl-know { font-size: .7rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--gold-text,#806524); text-decoration: none; }
+.sl-know:hover, .sl-brochure:hover { text-decoration: underline; }
+.sl-ask { margin-left: auto; padding: .7rem 1rem; text-align: center; }
+.sl-brochure { margin-top: 1rem; color: #58627a; font-size: .74rem; text-underline-offset: 3px; }
+.sl-empty { padding: 3rem 0; text-align: center; }
+.sl-reset { font: inherit; background: transparent; color: #112148; border: 1px solid #112148; padding: .6rem 1rem; border-radius: 6px; cursor: pointer; }
+.sl-more { display: flex; justify-content: center; margin-top: 2.5rem; }
+.sl-more-btn { color: var(--navy-deep,#112148); background: transparent; border: 1px solid var(--navy-deep,#112148); cursor: pointer; }
+.sl-note { margin: 2.5rem auto 0; max-width: 800px; text-align: center; font-size: .76rem; line-height: 1.7; color: #656b78; }
+
+@media (max-width: 1000px) {
+  .sl-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 640px) {
+  .sl-grid { grid-template-columns: minmax(0,1fr); }
+  .sl-toolbar { align-items: stretch; }
+  .sl-search { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sl * { transition: none !important; }
+}
+
+/* ---------- Mobile: swipe sliders ---------- */
+@media (max-width: 640px) {
+  /* Keep provider options on one row. */
+  .sl-provider {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .sl-provider-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 0.7rem 0.5rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  /* Category filters: finger-swipe only, no auto-slide. */
+  .sl-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 5px 4px 8px;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 4px;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sl-chip {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    font-size: .67rem;
+    padding: .6rem .8rem;
+  }
+
+  .sl-count {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+
+  /* Plans: auto-slide (from JS) plus finger swipe, next card peeks in. */
+  .sl-grid {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 5px 4px 14px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 4px;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide the scrollbar line; swiping still works. */
+  .sl-chips,
+  .sl-grid {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .sl-chips::-webkit-scrollbar,
+  .sl-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sl-card {
+    flex: 0 0 90%;
+    min-width: 0;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 12px rgba(17, 33, 72, 0.06);
+  }
+
+  .sl-image-wrap {
+    height: 200px;
+    padding: 14px 16px 30px;
+  }
+
+  .sl-image-logo {
+    padding: 32px;
+  }
+
+  .sl-card-body {
+    padding: 1.15rem;
+  }
+
+  .sl-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .sl-tagline {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .sl-points {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .sl-actions {
+    gap: 0.6rem;
+    padding-top: 1.2rem;
+  }
+
+  .sl-more {
+    margin-top: 1.25rem;
+  }
+
+  .sl-more-btn {
+    min-height: 44px;
+    padding: 0.75rem 1.2rem;
+  }
+
+  .sl-note {
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,213 @@
+/* =========================================================
+   CONTACT: details + form + steps
+   Class names start with "ct-"
+   ========================================================= */
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.ct-title {
+  margin-bottom: 1.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+/* ---------- Left: contact cards ---------- */
+.ct-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.ct-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.3rem 1.5rem;
+  background: var(--white);
+  border: 1px solid rgba(17, 33, 72, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+
+/* only the clickable cards (links) lift on hover */
+a.ct-item:hover {
+  transform: translateY(-3px);
+}
+
+.ct-item-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.ct-item-value {
+  font-size: 1.15rem;
+  color: var(--navy-deep);
+}
+
+.ct-hours {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.ct-directions {
+  align-self: flex-start;
+  margin-top: 0.8rem;
+  color: var(--navy-deep);
+  background: transparent;
+  border-color: var(--navy-deep);
+}
+
+/* ---------- Right: form ---------- */
+.ct-form {
+  padding: 2.4rem;
+  background: var(--white);
+  border: 1px solid rgba(171, 143, 70, 0.4);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ct-form h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.ct-intro {
+  margin: 0.6rem 0 1.6rem;
+}
+
+.ct-field {
+  display: block;
+  margin-bottom: 1.1rem;
+}
+
+.ct-field span {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+}
+
+.ct-field input,
+.ct-field select,
+.ct-field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid rgba(17, 33, 72, 0.22);
+  border-radius: 8px;
+}
+
+/* gold glow when a field is selected */
+.ct-field input:focus,
+.ct-field select:focus,
+.ct-field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(171, 143, 70, 0.2);
+}
+
+.ct-field textarea {
+  resize: vertical;
+}
+
+.ct-submit {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 1rem 1.6rem;
+}
+
+.ct-note {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- Steps ---------- */
+.ct-steps {
+  background: var(--off-white);
+}
+
+.ct-label {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.ct-steps-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.ct-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.ct-step-cell {
+  display: flex;
+}
+
+.ct-step {
+  flex: 1;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid rgba(17, 33, 72, 0.07);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ct-step-num {
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.ct-step h3 {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--navy-deep);
+}
+
+.ct-step p:last-child {
+  font-size: 0.95rem;
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .ct-grid,
+  .ct-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-form {
+    padding: 1.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ct-item { transition: none; }
+}

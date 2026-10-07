@@ -1,0 +1,141 @@
+/* =========================================================
+   SERVICES PREVIEW  (photo on the left, text on top right,
+   navy panel overlapping the photo's right edge)
+   Class names start with "sp-"
+   ========================================================= */
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr;
+  align-items: stretch;           /* photo is as tall as the right side */
+}
+
+/* no photo = single column */
+.sp-grid-nophoto {
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Photo ---------- */
+.sp-photo-cell {
+  display: flex;
+}
+
+.sp-photo {
+  position: relative;             /* needed for the "fill" image */
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.sp-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;              /* fills the frame, never stretches */
+}
+
+/* ---------- Right side ---------- */
+.sp-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.sp-header {
+  padding-left: 3rem;
+}
+
+.sp-grid-nophoto .sp-header {
+  padding-left: 0;
+}
+
+.sp-label {
+  margin-bottom: 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.sp-text {
+  max-width: 46ch;
+  margin: 1.2rem 0 1.8rem;
+  font-size: 1.05rem;
+}
+
+/* ---------- Navy panel (slides left, over the photo) ---------- */
+.sp-panel-wrap {
+  position: relative;
+  z-index: 2;                     /* sits ABOVE the photo */
+  margin-left: -6rem;
+}
+
+.sp-grid-nophoto .sp-panel-wrap {
+  margin-left: 0;
+}
+
+.sp-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.5rem;
+  padding: 1.5rem 3rem 2rem;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #1d3f74 100%);
+  box-shadow: var(--shadow);
+  color: var(--white);
+}
+
+.sp-item {
+  display: block;
+  padding: 1.4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sp-item h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+  color: var(--white);
+  transition: color 0.2s ease;
+}
+
+.sp-item p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sp-item:hover h3 {
+  color: var(--sky);
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .sp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-photo {
+    min-height: 340px;
+  }
+
+  .sp-right {
+    margin-top: 2rem;
+  }
+
+  .sp-header {
+    padding-left: 0;
+  }
+
+  .sp-panel-wrap {
+    margin-left: 0;               /* no overlap on small screens */
+  }
+
+  .sp-panel {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem 1.5rem;
+  }
+}

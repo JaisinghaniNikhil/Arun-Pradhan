@@ -1,0 +1,146 @@
+/* =========================================================
+   HERO  (one navy panel: text + stats left, portrait right)
+   ========================================================= */
+
+.hero {
+  padding: 2rem 0 4rem;
+}
+
+/* ---------- The panel ---------- */
+.hero-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 600px;
+  overflow: hidden;                /* keeps everything inside the rounded corners */
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  color: var(--white);
+
+  /* These three colors were sampled from the portrait's own backdrop
+     (top, middle, bottom), so the photo melts into the panel. */
+  background: linear-gradient(180deg, #1a407d 0%, #0d2759 50%, #07193c 100%);
+}
+
+/* one faint gold ring in the corner, for depth */
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  left: -200px;
+  bottom: -240px;
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(171, 143, 70, 0.28);
+  border-radius: 50%;
+}
+
+/* ---------- Left column ---------- */
+.hero-text {
+  position: relative;              /* sits above the ring */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1rem 4rem 4rem;
+}
+
+.hero-text h1 {
+  max-width: 18ch;
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  color: var(--white);
+  text-wrap: balance;
+}
+
+.hero-lead {
+  max-width: 38ch;
+  margin: 1.4rem 0 2rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Stats row (inside the panel) ---------- */
+.hero-stats {
+  display: flex;
+  margin-top: 2.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(171, 143, 70, 0.45);   /* thin gold line above the numbers */
+}
+
+.stat {
+  flex: 1;
+}
+
+/* thin white divider between the stats */
+.stat + .stat {
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stat-number {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.stat-suffix {
+  color: var(--gold);
+}
+
+.stat-label {
+  margin-top: 0.4rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Right column: portrait ---------- */
+.hero-photo-col {
+  position: relative;             /* required for the "fill" image */
+  z-index: 1;
+}
+
+.hero-photo {
+  object-fit: cover;
+  object-position: center top;    /* always keep his head in view */
+
+  /* fades the photo's LEFT edge into the panel, so there is no visible box */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;   /* stack: text first, portrait below */
+    min-height: 0;
+  }
+
+  .hero-text {
+    padding: 2.4rem 1.5rem 1.5rem;
+  }
+
+  .stat + .stat {
+    padding-left: 0.9rem;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-photo-col {
+    height: 440px;
+  }
+
+  /* on mobile the photo fades in from the TOP instead of the left */
+  .hero-photo {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 22%);
+  }
+}

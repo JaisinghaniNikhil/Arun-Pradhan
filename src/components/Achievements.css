@@ -1,0 +1,78 @@
+/* =========================================================
+   ACHIEVEMENTS  (centered columns with thin gold dividers)
+   Class names start with "ach-"
+   ========================================================= */
+
+.ach {
+  background: var(--off-white);
+}
+
+.ach-label {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.ach-title {
+  margin-bottom: 3.5rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* auto-fit = as many columns as fit (min 240px each), so 2, 3 or 4
+   achievements all look balanced without changing any code */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* thin gold line BETWEEN columns (not before the first one) */
+.ach-cell + .ach-cell {
+  border-left: 1px solid rgba(171, 143, 70, 0.4);
+}
+
+.ach-item {
+  padding: 1rem 2.2rem;
+  text-align: center;
+}
+
+.ach-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.ach-value {
+  margin: 0.6rem 0;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--navy-deep);
+}
+
+.ach-text {
+  max-width: 30ch;
+  margin-inline: auto;
+  font-size: 0.95rem;
+}
+
+/* ---------- Mobile / tablet ---------- */
+@media (max-width: 900px) {
+  .ach-grid {
+    grid-template-columns: 1fr;   /* stack the columns */
+  }
+
+  /* dividers become horizontal lines between the stacked items */
+  .ach-cell + .ach-cell {
+    border-left: none;
+    border-top: 1px solid rgba(171, 143, 70, 0.4);
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+  }
+}

@@ -1,0 +1,116 @@
+/* =========================================================
+   NAVBAR
+   Class names all start with "nav-" so they never clash
+   with other parts of the site.
+   ========================================================= */
+
+/* The outer strip that sticks to the top while scrolling */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 0.75rem 0;
+}
+
+/* The white floating bar inside it */
+.nav-bar {
+  position: relative; /* needed so the mobile menu can sit under the bar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.8rem 1.5rem;
+}
+
+/* ---------- Logo ---------- */
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-logo-name {
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--navy-deep);
+}
+
+.nav-logo-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+/* ---------- Links (desktop) ---------- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent; /* invisible until hover/active */
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold-text);
+}
+
+.nav-link-active {
+  border-bottom-color: var(--gold); /* gold underline on the current page */
+}
+
+/* ---------- Hamburger button (hidden on desktop) ---------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--navy-deep);
+}
+
+/* ---------- Mobile / tablet: 900px wide or smaller ---------- */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* the links become a dropdown card under the bar, hidden at first */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+  }
+
+  /* this class is added by React when the hamburger is clicked */
+  .nav-links-open {
+    display: flex;
+  }
+}
