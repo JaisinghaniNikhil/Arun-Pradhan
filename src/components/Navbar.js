@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="container nav-bar">
         {/* ---- Logo (name + small tagline) ---- */}
         <Link href="/" className="nav-logo" onClick={closeMenu}>
-          <span className="nav-logo-name">{content.Coordinator[Advisor]Name}</span>
+          <span className="nav-logo-name">{content.AdvisorName}</span>
           <span className="nav-logo-tag">{content.tagline}</span>
         </Link>
 

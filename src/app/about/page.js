@@ -7,9 +7,9 @@ import AboutGallery from "@/components/about/AboutGallery";
 
 // What Google shows for this page
 export const metadata = {
-    title: "About Arun Pradhan | LIC and Care Health Coordinator[Advisor], Mumbai",
+    title: "About Arun Pradhan | LIC and Care Health Advisor, Mumbai",
   description:
-    "Meet Arun Pradhan, a Mumbai insurance Coordinator[Advisor] associated with LIC and Care Health Insurance, and learn how he began his career.",
+    "Meet Arun Pradhan, a Mumbai insurance Advisor associated with LIC and Care Health Insurance, and learn how he began his career.",
 };
 
 export default function AboutPage() {

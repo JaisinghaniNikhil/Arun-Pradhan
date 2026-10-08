@@ -1,8 +1,8 @@
 export const site = {
   name: "Arun Kumar Pradhan",
   wordmark: "Arun Pradhan",
-  label: "LIC and Care Health Coordinator[Advisor], Mumbai",
-  tagline: "Coordinator[Advisor] for 25+ years. 11-time MDRT. Mentor to Coordinator[Advisor]s.",
+  label: "LIC and Care Health Advisor, Mumbai",
+  tagline: "Advisor for 25+ years. 11-time MDRT. Mentor to Advisors.",
   description: [
     "Clear guidance for protecting the people and plans that matter to you.",
     "I stay with clients beyond the policy paperwork, including when a claim needs attention.",
@@ -29,7 +29,7 @@ export const site = {
     { title: "Personal attention", copy: "Every conversation starts with your family, work, and priorities." },
     { title: "Long-term relationship", copy: "Policies change; a trusted relationship should stay useful." },
   ],
-  mentor: { title: "Mentoring the next generation of Coordinator[Advisor]s", copy: "I also help fellow Coordinator[Advisor]s build thoughtful, durable practices.", href: "/about#mentor" },
+  mentor: { title: "Mentoring the next generation of Advisors", copy: "I also help fellow Advisors build thoughtful, durable practices.", href: "/about#mentor" },
   awareness: { copy: "Insurance is easier to value before a difficult moment. A clear conversation today can help protect tomorrow's choices.", href: "/resources" },
   cta: { title: "Not sure what you need? Talk to me.", button: "Free Consultation" },
   footerQuote: "“The best time to review your cover is before you need it.”",

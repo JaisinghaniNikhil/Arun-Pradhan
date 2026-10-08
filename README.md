@@ -1,6 +1,6 @@
 # Arun Pradhan
 
-Premium editorial website for Arun Kumar Pradhan, LIC and Care Health insurance Coordinator[Advisor] in Mumbai.
+Premium editorial website for Arun Kumar Pradhan, LIC and Care Health insurance Advisor in Mumbai.
 
 ## Run locally
 
