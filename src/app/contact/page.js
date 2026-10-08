@@ -4,7 +4,7 @@ import { content } from "../../data/content";
 
 // What Google shows for this page
 export const metadata = {
-  title: "Contact Arun Pradhan | LIC & Health Insurance Consultant, Mumbai",
+  title: "Contact Arun Pradhan | LIC & Health Insurance Coordinator[Advisor], Mumbai",
     description:
     "Call, WhatsApp or visit Arun Pradhan in Ghatkopar, Mumbai to ask about LIC life insurance or Care Health Insurance.",
 };

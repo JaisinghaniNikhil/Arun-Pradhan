@@ -6,7 +6,7 @@ export default function AboutMentoring() {
   const m = content.about.mentoring;
 
   // the button opens WhatsApp with a ready-made message about mentoring
-  const message = "Hello Arun, I would like to know about mentoring for new Consultants.";
+  const message = "Hello Arun, I would like to know about mentoring for new Coordinator[Advisor]s.";
   const link = `https://wa.me/${content.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (

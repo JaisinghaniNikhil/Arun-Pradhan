@@ -1,7 +1,7 @@
 
 export const content = {
-  ConsultantName: "Arun Pradhan",
-  tagline: "LIC & Health Insurance Consultant",
+  Coordinator[Advisor]Name: "Arun Pradhan",
+  tagline: "LIC & Health Insurance Coordinator[Advisor]",
   navButton: "Contact Arun",
   phone: "9819488447",                 
   whatsappNumber: "9819488447",
@@ -31,7 +31,7 @@ export const content = {
     {
       tab: "Experience",
       image: "/images/why-experience.webp",
-      imageAlt: "An Consultant meeting a couple in a calm office",
+      imageAlt: "An Coordinator[Advisor] meeting a couple in a calm office",
       heading: "A conversation shaped by experience",
       text: "Arun has worked in insurance for over 25 years and has qualified for MDRT 11 times. He has spoken with more than 6,000 families about the cover they need and the premium they can manage.",
     },
@@ -53,8 +53,8 @@ export const content = {
 
   mentoring: {
     headline: "Sharing what he has learned with",
-    accent: "Consultants",
-    text: "Arun also trains new insurance Consultants in finding clients and building a practice, drawing on his own experience in the field.",
+    accent: "Coordinator[Advisor]s",
+    text: "Arun also trains new insurance Coordinator[Advisor]s in finding clients and building a practice, drawing on his own experience in the field.",
     button: "Learn About Mentoring",
   },
 
@@ -124,7 +124,7 @@ export const content = {
     items: [
       { title: "MDRT", value: "11x", text: "Arun has qualified for the Million Dollar Round Table 11 times." },
       { title: "Experience", value: "25+", text: "Years advising families on life and health insurance." },
-      { title: "Mentorship", value: "Mentor", text: "He also trains new Consultants in finding clients and building a practice." },
+      { title: "Mentorship", value: "Mentor", text: "He also trains new Coordinator[Advisor]s in finding clients and building a practice." },
     ],
   },
   // =========================================================
@@ -272,14 +272,14 @@ export const content = {
 
     story: {
       label: "Who is Arun",
-      heading: "An Insurance Consultant in",
+      heading: "An Insurance Coordinator[Advisor] in",
       accent: "Mumbai",
       image: "",   // swap for a different photo of Arun when you have one
-      imageAlt: "Arun Pradhan, LIC and health insurance Consultant",
+      imageAlt: "Arun Pradhan, LIC and health insurance Coordinator[Advisor]",
       paragraphs: [
-        "Arun Pradhan is a life and health insurance Consultant in Mumbai. He is associated with LIC of India and Care Health Insurance, and has worked with families for more than 25 years.",
+        "Arun Pradhan is a life and health insurance Coordinator[Advisor] in Mumbai. He is associated with LIC of India and Care Health Insurance, and has worked with families for more than 25 years.",
         "He has guided over 6,000 families, qualified for MDRT 11 times, and is a member of LIC's Galaxy Club. In a meeting, he starts by asking what the family needs to protect and what premium fits the monthly budget.",
-        "Arun also trains new insurance Consultants in client acquisition and building a practice. His story began in a cloth factory after he came to Mumbai from Odisha.",
+        "Arun also trains new insurance Coordinator[Advisor]s in client acquisition and building a practice. His story began in a cloth factory after he came to Mumbai from Odisha.",
       ],
     },
 
@@ -292,17 +292,17 @@ export const content = {
         { when: "1999", title: "A new start in Mumbai", text: "Arun came from Odisha and began work as a cloth factory helper, earning ₹1,200 a month." },
         { when: "Early years", title: "Saving for a course", text: "He set aside part of his wages and enrolled in a management course in Mumbai." },
         { when: "Corporate career", title: "Working at Reliance", text: "He joined Reliance on a monthly salary of ₹40,000, then decided to build a practice of his own." },
-        { when: "Early 2000s", title: "Starting as an LIC Consultant", text: "Arun chose life insurance and began advising families. The early years took patience and persistence." },
+        { when: "Early 2000s", title: "Starting as an LIC Coordinator[Advisor]", text: "Arun chose life insurance and began advising families. The early years took patience and persistence." },
         { when: "Growth years", title: "Meeting families, one by one", text: "His practice grew through conversations with families and the people they referred." },
         { when: "Recognition", title: "MDRT and LIC Galaxy Club", text: "Arun has qualified for MDRT 11 times and is a member of LIC's Galaxy Club." },
-        { when: "Today", title: "Advising and teaching", text: "He advises families on insurance and trains new Consultants." },
+        { when: "Today", title: "Advising and teaching", text: "He advises families on insurance and trains new Coordinator[Advisor]s." },
       ],
     },
 
     mentoring: {
       heading: "Training the Next Generation of",
-      accent: "Consultants",
-      text: "Arun trains new insurance Consultants in finding clients and running their practice. He shares lessons from his own work in the field.",
+      accent: "Coordinator[Advisor]s",
+      text: "Arun trains new insurance Coordinator[Advisor]s in finding clients and running their practice. He shares lessons from his own work in the field.",
       button: "Talk to Arun",
     },
     gallery: {

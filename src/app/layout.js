@@ -13,7 +13,7 @@ const jost = Jost({
 
 // This is what Google shows for your site (SEO)
 export const metadata = {
-  title: "Arun Pradhan | LIC & Health Insurance Consultant, Mumbai",
+  title: "Arun Pradhan | LIC & Health Insurance Coordinator[Advisor], Mumbai",
   description:
     "25+ years of honest guidance on LIC and health insurance. 6000+ families served.",
 };
