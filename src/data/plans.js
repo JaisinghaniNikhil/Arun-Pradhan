@@ -3,7 +3,7 @@
 // Descriptions are concise paraphrases of the linked official brochures.
 // Category overlaps are intentional (e.g. child money-back, unit-linked pension).
 // Every image is bundled locally; no Next.js remotePatterns configuration needed.
-// Current catalogue listings are not confirmation of this advisor’s sales channel.
+// Current catalogue listings are not confirmation of this Consultant’s sales channel.
 // See research/README.md for current/withdrawn conflicts and scope.
 export const plansLastChecked = "2026-10-04";
 export const planCategories = [

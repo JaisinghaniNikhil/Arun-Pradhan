@@ -1,7 +1,7 @@
 
 export const content = {
-  advisorName: "Arun Pradhan",
-  tagline: "LIC & Health Insurance Advisor",
+  ConsultantName: "Arun Pradhan",
+  tagline: "LIC & Health Insurance Consultant",
   navButton: "Contact Arun",
   phone: "9819488447",                 
   whatsappNumber: "9819488447",
@@ -31,7 +31,7 @@ export const content = {
     {
       tab: "Experience",
       image: "/images/why-experience.webp",
-      imageAlt: "An advisor meeting a couple in a calm office",
+      imageAlt: "An Consultant meeting a couple in a calm office",
       heading: "A conversation shaped by experience",
       text: "Arun has worked in insurance for over 25 years and has qualified for MDRT 11 times. He has spoken with more than 6,000 families about the cover they need and the premium they can manage.",
     },
@@ -53,8 +53,8 @@ export const content = {
 
   mentoring: {
     headline: "Sharing what he has learned with",
-    accent: "Advisors",
-    text: "Arun also trains new insurance advisors in finding clients and building a practice, drawing on his own experience in the field.",
+    accent: "Consultants",
+    text: "Arun also trains new insurance Consultants in finding clients and building a practice, drawing on his own experience in the field.",
     button: "Learn About Mentoring",
   },
 
@@ -124,7 +124,66 @@ export const content = {
     items: [
       { title: "MDRT", value: "11x", text: "Arun has qualified for the Million Dollar Round Table 11 times." },
       { title: "Experience", value: "25+", text: "Years advising families on life and health insurance." },
-      { title: "Mentorship", value: "Mentor", text: "He also trains new advisors in finding clients and building a practice." },
+      { title: "Mentorship", value: "Mentor", text: "He also trains new Consultants in finding clients and building a practice." },
+    ],
+  },
+  // =========================================================
+// PASTE THIS BLOCK into src/data/content.js, just before the
+// final closing "};"  (top level, same level as hero / about / contact).
+// =========================================================
+
+  licSpotlight: {
+    label: "LIC at a glance",
+    heading: "A Name Families Have Trusted for",
+    accent: "70 Years",
+
+    // the big "70" panel is built from text, so it needs no image
+    anniversary: {
+      value: 70,
+      valueLabel: "Years of LIC of India",
+      title: "Serving Indian families since 1956",
+      text: "LIC of India was established in 1956 and completes 70 years in 2026. For more than 20 years, Arun has helped families choose LIC plans that fit their needs.",
+    },
+
+    // OPTIONAL poster row. It stays hidden while this list is empty.
+    // Add a poster ONLY if it is an official LIC creative that LIC allows agents to publish.
+    // =========================================================
+// In src/data/content.js, inside  licSpotlight: { ... },
+// REPLACE the three lines/blocks  creativesTitle,  creatives: [ ... ],
+// with everything below. Leave label, heading, accent, anniversary and disclaimer alone.
+// =========================================================
+
+    creativesTitle: "LIC in focus",
+    creativesButton: "View Plans",   // used when a poster has no buttonText of its own
+
+    // Each poster is a card with a button underneath. Clicking anywhere on the card goes to /services.
+    //   note       = optional small caution line shown under the caption
+    //   buttonText = optional, e.g. "View Savings Plans"
+    //   href       = optional, defaults to "/services"
+    creatives: [
+      {
+        image: "/images/70-years.webp",
+        title: "LIC celebrates 70 years",
+        caption: "1956 to 2026.",
+        buttonText: "Explore LIC Plans",
+        alt: "LIC 70 years of trust and commitment celebration poster",
+      },
+      {
+        image: "/images/jeevan-utsav.webp",
+        title: "Jeevan Utsav, single premium",
+        caption: "Please read the official brochure for benefits and terms.",
+        note: "Benefits are as per the official brochure and policy terms.",
+        buttonText: "View Savings Plans",
+        alt: "LIC Jeevan Utsav single premium plan poster in Marathi",
+      },
+      {
+        image: "/images/nivesh-plus.webp",
+        title: "Nivesh Plus, unit-linked plan",
+        caption: "A market-linked plan with life cover.",
+        note: "Market-linked plan: fund value is not guaranteed and depends on market performance. Please read the official brochure before buying.",
+        buttonText: "View Unit Linked Plans",
+        alt: "LIC Nivesh Plus unit-linked plan poster",
+      },
     ],
   },
 
@@ -157,10 +216,9 @@ export const content = {
     quote: "Protect what matters today. Plan thoughtfully for tomorrow.",
     quickLinksTitle: "Quick Links",
     contactTitle: "+91 98194 88447",
-    address: "Branch - 928, Sameer Building, Near BMC Office, Behind IDBI Bank, Ghatkopar (E), Mumbai - 400 007",
+    address: "LIC Br. 928, Metropol Building, 1st Floor, Next to Jhunjhunwala College, Ghatkopar (West), Mumbai – 400 086.",
     email: "arunisukuri@yahoo.co.in",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30164.375065466425!2d72.86970921083984!3d19.083649800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7fe638226b1%3A0xd346e40c194bf70f!2sLIC%20of%20India%2C%20Branch%20Office!5e0!3m2!1sen!2sin!4v1791104864837!5m2!1sen!2sin", // Google Maps > Share > Embed a map > copy ONLY the src="..." link
-    licenseLine: "",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5180.525909636652!2d72.91141653645228!3d19.084633408817503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sLIC%20Br.%20928%2C%20Metropol%20Building%2C%201st%20Floor%2C%20Next%20to%20Jhunjhunwala%20College%2C%20Ghatkopar%2C%20Mumbai%20%E2%80%93%20400%20086.!5e0!3m2!1sen!2sin!4v1791444310107!5m2!1sen!2sin",
     disclaimer: "Insurance is the subject matter of solicitation. Arun Pradhan is an authorized agent of LIC and Care Health Insurance, not an insurer. Read the relevant policy documents for terms, exclusions, limits and risks before buying. The insurer decides on all claims.",
   },
 
@@ -214,14 +272,14 @@ export const content = {
 
     story: {
       label: "Who is Arun",
-      heading: "An Insurance Advisor in",
+      heading: "An Insurance Consultant in",
       accent: "Mumbai",
       image: "",   // swap for a different photo of Arun when you have one
-      imageAlt: "Arun Pradhan, LIC and health insurance advisor",
+      imageAlt: "Arun Pradhan, LIC and health insurance Consultant",
       paragraphs: [
-        "Arun Pradhan is a life and health insurance advisor in Mumbai. He is associated with LIC of India and Care Health Insurance, and has worked with families for more than 25 years.",
+        "Arun Pradhan is a life and health insurance Consultant in Mumbai. He is associated with LIC of India and Care Health Insurance, and has worked with families for more than 25 years.",
         "He has guided over 6,000 families, qualified for MDRT 11 times, and is a member of LIC's Galaxy Club. In a meeting, he starts by asking what the family needs to protect and what premium fits the monthly budget.",
-        "Arun also trains new insurance advisors in client acquisition and building a practice. His story began in a cloth factory after he came to Mumbai from Odisha.",
+        "Arun also trains new insurance Consultants in client acquisition and building a practice. His story began in a cloth factory after he came to Mumbai from Odisha.",
       ],
     },
 
@@ -234,17 +292,17 @@ export const content = {
         { when: "1999", title: "A new start in Mumbai", text: "Arun came from Odisha and began work as a cloth factory helper, earning ₹1,200 a month." },
         { when: "Early years", title: "Saving for a course", text: "He set aside part of his wages and enrolled in a management course in Mumbai." },
         { when: "Corporate career", title: "Working at Reliance", text: "He joined Reliance on a monthly salary of ₹40,000, then decided to build a practice of his own." },
-        { when: "Early 2000s", title: "Starting as an LIC advisor", text: "Arun chose life insurance and began advising families. The early years took patience and persistence." },
+        { when: "Early 2000s", title: "Starting as an LIC Consultant", text: "Arun chose life insurance and began advising families. The early years took patience and persistence." },
         { when: "Growth years", title: "Meeting families, one by one", text: "His practice grew through conversations with families and the people they referred." },
         { when: "Recognition", title: "MDRT and LIC Galaxy Club", text: "Arun has qualified for MDRT 11 times and is a member of LIC's Galaxy Club." },
-        { when: "Today", title: "Advising and teaching", text: "He advises families on insurance and trains new advisors." },
+        { when: "Today", title: "Advising and teaching", text: "He advises families on insurance and trains new Consultants." },
       ],
     },
 
     mentoring: {
       heading: "Training the Next Generation of",
-      accent: "Advisors",
-      text: "Arun trains new insurance advisors in finding clients and running their practice. He shares lessons from his own work in the field.",
+      accent: "Consultants",
+      text: "Arun trains new insurance Consultants in finding clients and running their practice. He shares lessons from his own work in the field.",
       button: "Talk to Arun",
     },
     gallery: {

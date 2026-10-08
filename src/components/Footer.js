@@ -6,7 +6,7 @@ import "./Footer.css";
 const has = (value) => value && !value.startsWith("TODO");
 
 export default function Footer() {
-  const { footer: f, advisorName, tagline, phone, nav } = content;
+  const { footer: f, ConsultantName, tagline, phone, nav } = content;
 
   return (
     <footer className="footer">
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="footer-grid">
           {/* 1. Name + quote */}
           <div>
-            <p className="footer-name">{advisorName}</p>
+            <p className="footer-name">{ConsultantName}</p>
             <p className="footer-tag">{tagline}</p>
             <blockquote className="footer-quote">{f.quote}</blockquote>
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="footer-map">
             <iframe
               src={f.mapEmbedUrl}
-              title={`Office location of ${advisorName}`}
+              title={`Office location of ${ConsultantName}`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
@@ -71,7 +71,7 @@ export default function Footer() {
 
           <div className="footer-meta">
             <span>
-              © {new Date().getFullYear()} {advisorName}. All rights reserved.
+              © {new Date().getFullYear()} {ConsultantName}. All rights reserved.
             </span>
             <span>{f.credit}</span>
           </div>

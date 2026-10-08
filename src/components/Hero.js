@@ -7,7 +7,7 @@ import CountUp from "./CountUp";
 import "./Hero.css";
 
 export default function Hero() {
-  const { hero, stats, whatsappNumber, advisorName } = content;
+  const { hero, stats, whatsappNumber, ConsultantName } = content;
 
   // Clicking the button opens WhatsApp with a ready-made message
   const message = "Hello Arun, I would like to talk about insurance.";
@@ -64,7 +64,7 @@ export default function Hero() {
             {/* "fill" makes the image fill its column; CSS decides how it is cropped */}
             <Image
               src="/images/arun-hero.webp"
-              alt={`${advisorName}, LIC and health insurance advisor`}
+              alt={`${ConsultantName}, LIC and health insurance Consultant`}
               fill
               priority
               sizes="(max-width: 900px) 100vw, 45vw"

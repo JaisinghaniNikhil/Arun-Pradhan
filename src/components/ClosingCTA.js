@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 import "./ClosingCTA.css";
 
 export default function ClosingCTA() {
-  const { closingCta: cta, advisorName, tagline, whatsappNumber } = content;
+  const { closingCta: cta, ConsultantName, tagline, whatsappNumber } = content;
 
   // the gold button opens WhatsApp with a ready-made message
   const message = "Hello Arun, I would like to talk about insurance.";
@@ -39,7 +39,7 @@ export default function ClosingCTA() {
 
             {/* ---------- Right: name + tagline (acts like a logo) ---------- */}
             <div className="cta-brand">
-              <p className="cta-brand-name">{advisorName}</p>
+              <p className="cta-brand-name">{ConsultantName}</p>
               <p className="cta-brand-tag">{tagline}</p>
             </div>
           </div>

@@ -6,13 +6,13 @@ import "./AboutStory.css";
 // It is built from text, so it stays sharp on every screen.
 // Everything in it comes from content.js (name, tagline, quote, logos).
 function QuotePanel() {
-  const { advisorName, tagline, footer, insurers } = content;
+  const { ConsultantName, tagline, footer, insurers } = content;
 
   return (
     <div className="qp">
       <div>
         <p className="qp-eyebrow">The story behind</p>
-        <p className="qp-name">{advisorName}</p>
+        <p className="qp-name">{ConsultantName}</p>
         <p className="qp-tag">{tagline}</p>
       </div>
 
