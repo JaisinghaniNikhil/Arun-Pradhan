@@ -7,7 +7,7 @@ import CountUp from "./CountUp";
 import "./Hero.css";
 
 export default function Hero() {
-  const { hero, stats, whatsappNumber, AdvisorName } = content;
+  const { hero, stats, galaxyBadge, whatsappNumber, AdvisorName } = content;
 
   // Clicking the button opens WhatsApp with a ready-made message
   const message = "Hello Arun, I would like to talk about insurance.";
@@ -51,6 +51,9 @@ export default function Hero() {
                   <div className="stat-label">{stat.label}</div>
                 </div>
               ))}
+            </div>
+            <div className="hero-badge">
+              <span aria-hidden="true">★</span> {galaxyBadge}
             </div>
           </motion.div>
 

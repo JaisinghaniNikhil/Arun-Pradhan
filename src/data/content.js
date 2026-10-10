@@ -26,6 +26,7 @@ export const content = {
     { value: 6000, suffix: "+", label: "Families served" },
     { value: 11, suffix: "x", label: "MDRT qualifier" },
   ],
+  galaxyBadge: "Member of LIC's Galaxy Club",
 
   whyArun: [
     {
@@ -167,6 +168,15 @@ export const content = {
         caption: "1956 to 2026.",
         buttonText: "Explore LIC Plans",
         alt: "LIC 70 years of trust and commitment celebration poster",
+      },
+      {
+        image: "/images/lic-guarantee.webp",
+        title: "Government guarantee under Section 37",
+        caption: "How the LIC Act protects policy payments.",
+        note: "Section 37 covers the sum assured and declared bonuses. Please read your policy documents for exact terms.",
+        buttonText: "Talk to Arun",
+        href: "/contact",
+        alt: "LIC government guarantee notice under Section 37 of the LIC Act 1956",
       },
       {
         image: "/images/jeevan-utsav.webp",
