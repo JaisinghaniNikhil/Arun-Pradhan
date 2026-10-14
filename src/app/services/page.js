@@ -3,11 +3,10 @@ import ServicesList from "../../components/ServicesList";
 import ClosingCTA from "../../components/ClosingCTA";
 import { content } from "../../data/content";
 
-// What Google shows for this page
 export const metadata = {
-  title: "LIC & Health Insurance Plans | Arun Pradhan",
-    description:
-    "Explore LIC life insurance and Care Health Insurance options, with links to official product details and brochures.",
+  title: "LIC Plans in Ghatkopar | Term, Child, Pension & Health",
+  description:
+    "Explore every LIC plan, from term and child plans to pension and whole life, plus Care Health Insurance, with personal guidance from Arun Pradhan.",
 };
 
 export default function ServicesPage() {

@@ -2,11 +2,10 @@ import PageHeader from "../../components/PageHeader";
 import ContactSection from "../../components/contact/ContactSection";
 import { content } from "../../data/content";
 
-// What Google shows for this page
 export const metadata = {
-  title: "Contact Arun Pradhan | LIC & Health Insurance Advisor, Mumbai",
-    description:
-    "Call, WhatsApp or visit Arun Pradhan in Ghatkopar, Mumbai to ask about LIC life insurance or Care Health Insurance.",
+  title: "Contact Arun Pradhan – LIC Agent in Ghatkopar",
+  description:
+    "Talk to Arun Pradhan, LIC and Care Health advisor in Ghatkopar, Mumbai. Call, WhatsApp or send an enquiry for free policy guidance.",
 };
 
 export default function ContactPage() {

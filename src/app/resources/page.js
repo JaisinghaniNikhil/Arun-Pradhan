@@ -3,11 +3,10 @@ import ResourcesLibrary from "../../components/ResourcesLibrary";
 import ClosingCTA from "../../components/ClosingCTA";
 
 export const metadata = {
-  title: "Insurance Guides & FAQs | Arun Pradhan",
+  title: "LIC Plans Guide: How to Choose the Right Policy",
   description:
-    "Explore clear guides to life insurance, family health cover and retirement planning, plus answers to common policy questions.",
+    "Simple guides to help you understand LIC plans, compare term and endowment policies and choose the right cover for your family.",
 };
-
 export default function ResourcesPage() {
   return (
     <main>
